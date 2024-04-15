@@ -47,3 +47,11 @@ variable "applications" {
   default = {}
 }
 
+variable "resource_groups" {
+  description = "User specified resource groups provisioned by Station"
+  type = map(object({
+    location = string
+    name     = string
+  }))
+  default = {}
+}
